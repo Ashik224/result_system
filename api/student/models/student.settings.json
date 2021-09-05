@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "students",
+  "info": {
+    "name": "student",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "roll": {
+      "type": "integer",
+      "required": true,
+      "unique": true
+    },
+    "registration": {
+      "type": "integer",
+      "required": true,
+      "unique": true
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "phone": {
+      "type": "string"
+    },
+    "session": {
+      "type": "string",
+      "required": true
+    },
+    "faculty": {
+      "via": "students",
+      "model": "faculty"
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "faculties",
+  "info": {
+    "name": "faculty",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "syllabus": {
+      "type": "string",
+      "required": true
+    },
+    "students": {
+      "collection": "student",
+      "via": "faculty"
+    },
+    "courses": {
+      "collection": "course",
+      "via": "faculty"
+    },
+    "semesters": {
+      "collection": "semester",
+      "via": "faculties",
+      "dominant": true
+    }
+  }
+}

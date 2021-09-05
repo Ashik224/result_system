@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "semesters",
+  "info": {
+    "name": "semester"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "level": {
+      "type": "string",
+      "required": true
+    },
+    "faculties": {
+      "via": "semesters",
+      "collection": "faculty"
+    }
+  }
+}
